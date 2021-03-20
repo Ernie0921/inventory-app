@@ -1,8 +1,8 @@
 ## Inventory App
-A little info about your project and/ or overview that explains **what** the project is about.
+This application will allow users to create their own inventory database
 
 ## Decription
-A little more description of what the project is about 
+Users will be able to add, delete, update view their inventory
 
 ## Motivation
 A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
