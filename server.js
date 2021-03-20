@@ -17,7 +17,7 @@ app.use(bodyparser.urlencoded({extended: true}))
 
 //set view engine
 app.set("view engine", "ejs");
-//app.set("views",path.resolve(__dirname,"views/ejs"))   //this is how you find the path to you ejs file if you created folder in the views folder
+//app.set("views",path.resolve(__dirname,"views/ejs"))   //this is how you find the path to you ejs file if you created folder called ejsin the views folder
 
 //load assets
 app.use('/css', express.static(path.resolve(__dirname,"assets/css"))) // find path to assets /css
@@ -26,7 +26,8 @@ app.use('/js', express.static(path.resolve(__dirname,"assets/js"))) // find path
 
 
 app.get('/', (req, res) => {  // show this on the localhost
-    res.send('Hello test ')
+    //res.send('Hello test ')  
+    res.render('index');
 })
 
 
