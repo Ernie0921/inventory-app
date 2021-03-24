@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8080
 
 //log request on terminal
 app.use(morgan('tiny'))
-
+ 
 //parse POST data to the server so it can be read . 
 app.use(bodyparser.urlencoded({extended: true}))
 
@@ -25,12 +25,16 @@ app.use('/img', express.static(path.resolve(__dirname,"assets/img"))) // find pa
 app.use('/js', express.static(path.resolve(__dirname,"assets/js"))) // find path to assets /js
 
 
-app.get('/', (req, res) => {  // show this on the localhost
+app.get('/', (req, res) => {  // route to index.ejs file 
     //res.send('Hello test ')  
     res.render('index');
 })
 
-
+app.get('/add-user', (req, res) => {  //route to new user 
+    //res.send('Hello test ')  
+    res.render('add_user');
+})
+  
 app.listen(PORT, () => { //message to show terminal when running server
     console.log(`Server running on http://localhost:${PORT}`)
 });
