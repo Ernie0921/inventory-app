@@ -34,6 +34,11 @@ app.get('/add-user', (req, res) => {  //route to new user
     //res.send('Hello test ')  
     res.render('add_user');
 })
+
+app.get('/update-user', (req, res) => {  //route to new user 
+    //res.send('Hello test ')  
+    res.render('update_user');
+})
   
 app.listen(PORT, () => { //message to show terminal when running server
     console.log(`Server running on http://localhost:${PORT}`)
