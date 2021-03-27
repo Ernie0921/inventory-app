@@ -4,6 +4,8 @@ const morgan = require('morgan'); //lets your log a request whenever you make a 
 const bodyparser = require('body-parser');
 const path = require('path');//inbuild in node application /no need to npm install
 
+const connectDB = require('./server/database/connection');
+
 const app = express();
 
 dotenv.config({path:'config.env'}) //use the config PORT VARIABLE in the env file
@@ -11,6 +13,9 @@ const PORT = process.env.PORT || 8080
 
 //log request on terminal
 app.use(morgan('tiny'))
+ 
+//mongoDB  connection 
+connectDB();
  
 //parse POST data to the server so it can be read . 
 app.use(bodyparser.urlencoded({extended: true}))

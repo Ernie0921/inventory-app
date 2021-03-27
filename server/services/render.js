@@ -1,4 +1,4 @@
-exports.homeRoutes = (req, res) => {
+exports.homeRoutes = (req, res) => {  // render the index ejs and import it 
     res.render('index');
 }
 
